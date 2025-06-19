@@ -42,7 +42,7 @@ In South Sudan, there’s poor diagnostic procedures; delayed time for lab resul
 
             <p>The Lung Cancer Detection system was developed and evaluated using a dataset of medical images specifically curated for the task of lung cancer classification. The dataset is stored in an HDF5 file named data.h5 and is organized into distinct subsets for training and testing the CNN model.
                 
-               Dataset Structure:
+             <!--  Dataset Structure:
                 
                 The data.h5 file contains the following key components:
                 
@@ -50,14 +50,14 @@ In South Sudan, there’s poor diagnostic procedures; delayed time for lab resul
                 train-labels: An array of corresponding labels for the train-images. Each label is an integer representing the class of the respective image (e.g., 0 for Normal, 1 for Benign, 2 for Malignant). The shape is (number_of_training_samples,).
                 test-images: A collection of image arrays used for evaluating the trained CNN model on unseen data. Similar to train-images, these are preprocessed lung scans. The shape is (number_of_testing_samples, image_height, image_width, number_of_channels).
                 test-labels: An array of corresponding labels for the test-images, with integer values representing the class of each image. The shape is (number_of_testing_samples,).
-                Classes:
+                Classes:-->
                 
-                The dataset includes images belonging to three distinct classes:
+             <!--   The dataset includes images belonging to three distinct classes:
                 
                 Normal: Represents images of healthy lungs without any signs of cancer.
                 Bengin (Benign): Represents images containing benign nodules or growths in the lungs.
                 Malignant: Represents images containing malignant tumors or cancerous growths in the lungs.
-                These classes are crucial for training the model to differentiate between various lung conditions.
+                These classes are crucial for training the model to differentiate between various lung conditions.-->
                 
               <!--  Data Loading and Handling:
                 
@@ -74,7 +74,7 @@ In South Sudan, there’s poor diagnostic procedures; delayed time for lab resul
         </section>
 
         <section id="grasp-generation">
-            <h2>Model</h2>
+            Model
             <p>
 
                 The Lung Cancer Detection system utilizes a Convolutional Neural Network (CNN) model specifically designed for the task of classifying medical images of the lungs. The model architecture is defined to effectively extract relevant features from the input images and classify them into the predetermined categories: Normal, Bengin (Benign), and Malignant. <br><b>Model Architecture:</b></br>
@@ -92,7 +92,7 @@ In South Sudan, there’s poor diagnostic procedures; delayed time for lab resul
                     'Same' padding is applied to preserve the spatial dimensions of the input after convolution.
                     Max Pooling Layers:
                     
-                    Following each convolutional layer, a MaxPooling2D layer is used. These layers downsample the spatial dimensions of the feature maps by taking the maximum value within a defined pooling window (e.g., (2, 2)). Max pooling helps to reduce the computational cost, control overfitting, and make the model more robust to small shifts and distortions in the input images.
+                <!--    Following each convolutional layer, a MaxPooling2D layer is used. These layers downsample the spatial dimensions of the feature maps by taking the maximum value within a defined pooling window (e.g., (2, 2)). Max pooling helps to reduce the computational cost, control overfitting, and make the model more robust to small shifts and distortions in the input images.
                     Flatten Layer:
                     
                     After the final pooling layer, a Flatten layer is used to convert the 2D feature maps into a 1D vector. This is necessary to connect the convolutional part of the network to the fully connected layers.
@@ -105,7 +105,7 @@ In South Sudan, there’s poor diagnostic procedures; delayed time for lab resul
                     Output Layer:
                     
                     The final layer is a Dense layer with a number of units equal to the number of classes (three in this case: Normal, Benign, Malignant). The softmax activation function is used in this layer to output a probability distribution over the classes. The class with the highest probability is the model's prediction.
-                    Model Compilation and Training:
+                    Model Compilation and Training:-->
                     
                 <!--    The model is compiled using the 'adam' optimizer, which is a popular choice for optimizing neural networks. The 'sparse_categorical_crossentropy' loss function is used, which is appropriate for multi-class classification with integer labels. The 'accuracy' metric is used to evaluate the model's performance during training and testing.
                     
