@@ -90,56 +90,6 @@ In South Sudan, there’s poor diagnostic procedures; delayed time for lab resul
                 <img src="images/data.png" alt="Method Overview Diagram"> <!-- Placeholder for your method diagram -->
             </div>
         </section>
-
-        <section id="grasp-generation">
-            <p>
- Model:
-                The Lung Cancer Detection system utilizes a Convolutional Neural Network (CNN) model specifically designed for the task of classifying medical images of the lungs. The model architecture is defined to effectively extract relevant features from the input images and classify them into the predetermined categories: Normal, Bengin (Benign), and Malignant. <br><b>Model Architecture:</b></br>
-
-                    The CNN model is built using TensorFlow's Keras API and has a sequential structure, meaning that layers are added one after the other. The architecture consists of the following layers:
-                    
-                    Input Layer:
-                    
-                    The model starts with an Input layer that expects images with a specific shape, which is determined by the dimensions of your input data (image height, image width, and number of channels). This layer defines the input size for the entire network.
-                    Convolutional Layers:
-                    
-                    The model employs multiple Conv2D layers. These layers are the core of the CNN and are responsible for learning spatial hierarchies of features from the input images.
-                    Each Conv2D layer uses a specified number of filters (e.g., 32, 64, 128) with a defined kernel size (e.g., (5, 5), (3, 3)). The filters slide over the input image, performing convolutions to detect patterns such as edges, corners, and textures.
-                    The ReLU (Rectified Linear Unit) activation function is used after each convolutional layer to introduce non-linearity, which is essential for learning complex patterns.
-                    'Same' padding is applied to preserve the spatial dimensions of the input after convolution.
-                    Max Pooling Layers:
-                    
-                <!--    Following each convolutional layer, a MaxPooling2D layer is used. These layers downsample the spatial dimensions of the feature maps by taking the maximum value within a defined pooling window (e.g., (2, 2)). Max pooling helps to reduce the computational cost, control overfitting, and make the model more robust to small shifts and distortions in the input images.
-                    Flatten Layer:
-                    
-                    After the final pooling layer, a Flatten layer is used to convert the 2D feature maps into a 1D vector. This is necessary to connect the convolutional part of the network to the fully connected layers.
-                    Dropout Layer:
-                    
-                    A Dropout layer is included to prevent overfitting. During training, this layer randomly sets a fraction of the input units to zero at each update. This helps to prevent the model from relying too heavily on specific neurons and encourages it to learn more robust and generalized features.
-                    Dense (Fully Connected) Layers:
-                    
-                    The flattened features are passed through two Dense layers. These are fully connected layers where each neuron is connected to every neuron in the previous layer. They perform non-linear transformations on the features learned by the convolutional layers. ReLU activation is used in the first dense layer.
-                    Output Layer:
-                    
-                    The final layer is a Dense layer with a number of units equal to the number of classes (three in this case: Normal, Benign, Malignant). The softmax activation function is used in this layer to output a probability distribution over the classes. The class with the highest probability is the model's prediction.
-                    Model Compilation and Training:-->
-                    
-                <!--    The model is compiled using the 'adam' optimizer, which is a popular choice for optimizing neural networks. The 'sparse_categorical_crossentropy' loss function is used, which is appropriate for multi-class classification with integer labels. The 'accuracy' metric is used to evaluate the model's performance during training and testing.
-                    
-                    The model is trained using the fit method, where it learns to map the input images to the corresponding labels by minimizing the loss function. The training process involves multiple epochs (iterations over the entire training dataset) and uses batches of data for gradient descent optimization.
-                    
-                    Purpose:
-                    
-                    The purpose of this CNN model is to automatically analyze lung images, learn complex patterns that differentiate between normal, benign, and malignant cases, and provide a classification prediction. By leveraging the power of convolutional layers to extract spatial features, the model aims to improve the accuracy and efficiency of lung cancer detection compared to manual interpretation.</p>
-                <p>You can include a diagram or image of your model architecture.</p>-->
-            </p>
-            <div class="generation-images">
-                <img src="images/CNN.png.jpg" alt="Grasp Generation Top"> <!-- Placeholder -->
-                <!-- Add more images as needed -->
-            </div>
-        </section>
-
-        <section id="object-generation">
             <h2>Results</h2>
             <p>Results
 
